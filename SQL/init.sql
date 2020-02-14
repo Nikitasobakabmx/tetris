@@ -1,6 +1,6 @@
-CREATE DATABASE gleba;
 
-CREATE USER gleb;
+
+
 
 CREATE TABLE automobile
 (

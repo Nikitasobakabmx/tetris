@@ -1,0 +1,6 @@
+1
+	!!!!!!!!!!!!!!!!before starting labs!!!!!!!!
+	sudo systemctl ctop tomcat
+2
+	all labs start like 
+	make \n
