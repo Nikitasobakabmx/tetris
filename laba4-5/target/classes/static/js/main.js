@@ -26,7 +26,7 @@ let controller = app.controller("CarController", function($scope, $http){
         }).then(_success, _error)
     };
 
-    $scope.Car = function () {
+    $scope.appendCars = function () {
 
         let Car = {
             "name" : document.getElementById("adding").name.value,
