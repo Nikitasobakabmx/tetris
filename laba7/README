@@ -1,0 +1,27 @@
+   Start 5 termilal
+
+        1 terminal - start zookeeper
+                cd /home/kafka/kafka
+                sudo su kafka
+                        111261
+                bin/zookeeper-server-start.sh config/zookeeper.properties
+
+        2 terminal -  start kafka
+                cd /home/kafka/kafka
+                sudo su kafka
+                        111261
+                bin/kafka-server-start.sh config/server.properties
+
+        3 terminal - create topic
+                cd /home/kafka/kafka
+                sudo su kafka
+                        111261
+                bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic testTopic
+                        wait 'Created topic "testTopic"'
+        4 termilal - start Consumer
+                go to laba7/Consumer
+                make
+        5 terminal - start Producer
+                go to lab7/Producer
+                make
+        localhost:8080

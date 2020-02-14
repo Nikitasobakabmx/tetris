@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="artefact:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>artefact</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="kafkaConsumer.war">
+      <element id="artifact" artifact-name="artefact:war exploded" />
+    </root>
+  </artifact>
+</component>
