@@ -22,7 +22,7 @@
     <li ng-repeat = "car in cars">
         <form id={{car.id}}>
             <input type = "text" name="name" value  = {{car.name}}>
-            <input type = "text" name="studioName" value  = {{car.brand}}>
+            <input type = "text" name="brand" value  = {{car.brand}}>
             <input type = "text" name="cost" value={{car.cost}}>
             <input type = "hidden" name="id" value  = {{car.id}}>
             <button ng-click="deleteCat(car)">Удалить</button>
