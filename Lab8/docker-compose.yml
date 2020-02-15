@@ -1,7 +1,7 @@
 version: '3'  
 services:
   postgres:
-    image: d5d8668704aa
+    image: my_postgres:latest
     network_mode: bridge
     container_name: my_postgres
     volumes:
@@ -18,7 +18,7 @@ services:
 # APP*****************************************
 
   springbootapp:
-    image: a021a71c7620
+    image: spring_docker:latest
     network_mode: bridge
     container_name: spring-docker
     expose:

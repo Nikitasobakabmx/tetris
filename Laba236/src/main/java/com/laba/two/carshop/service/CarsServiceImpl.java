@@ -13,35 +13,35 @@ import java.util.Optional;
 public class CarsServiceImpl implements CarsService {
 
     @Autowired
-    CarsRepository gameRepository;
+    CarsRepository carRepository;
 
 
     @Override
     public Iterable<CarsEntity> findAll() {
-        return gameRepository.findAll();
+        return carRepository.findAll();
     }
 
     @Override
     public void delete(CarsEntity game){
-        gameRepository.delete(game);
+        carRepository.delete(game);
     }
 
     @Override
     public void deleteById(String id) {
-        gameRepository.deleteById(Long.parseLong(id));
+        carRepository.deleteById(Long.parseLong(id));
     }
 
     @Override
     public Optional<CarsEntity> findById(String id) {
-        return gameRepository.findById(Long.parseLong(id));
+        return carRepository.findById(Long.parseLong(id));
     }
 
     @Override
     public CarsEntity update(CarsEntity car) {
-        Optional<CarsEntity> tmp = gameRepository.findById(car.getId());
+        Optional<CarsEntity> tmp = carRepository.findById(car.getId());
         CarsEntity oneTmp = tmp.get();
         oneTmp = merge(oneTmp, car);
-        gameRepository.save(oneTmp);
+        carRepository.save(oneTmp);
         return oneTmp;
     }
 
@@ -62,6 +62,6 @@ public class CarsServiceImpl implements CarsService {
     }
     @Override
     public void append(CarsEntity game) {
-        gameRepository.save(game);
+        carRepository.save(game);
     }
 }

@@ -10,10 +10,9 @@ let controller = app.controller("CarController", function($scope, $http){
         photo:"",
         description:""
     };
-    //Update
     __refreshCarData();
 
-    $scope.Car = function(){
+    $scope.appendCar = function(){
         var methode = "POST";
         var url = "/cars";
         $http({
@@ -26,7 +25,7 @@ let controller = app.controller("CarController", function($scope, $http){
         }).then(_success, _error)
     };
 
-    $scope.Car = function () {
+    $scope.appendCar = function () {
 
         let Car = {
             "name" : document.getElementById("adding").name.value,
@@ -35,14 +34,6 @@ let controller = app.controller("CarController", function($scope, $http){
         };
         console.log(document.getElementById("adding").value);
         $http.post("/cars", angular.toJson(Car)).then(_success,_error);
-        // $http({
-        //     methode: "POST",
-        //     url:"/cars",
-        //     data:angular.toJson(Car),
-        //     headers:{
-        //         "Content-Type" : "application/json"
-        //     }
-        // }).then(_success, _error);
         _clearFormData();
         __refreshCarData();
     };
@@ -69,7 +60,7 @@ let controller = app.controller("CarController", function($scope, $http){
 
     function _clearFormData() {
         document.getElementById("adding").name.value = "Название";
-        document.getElementById("adding").brand.value = "Студия";
+        document.getElementById("adding").brand.value = "Бренд";
         document.getElementById("adding").cost.value = "Стоимость"
     }
 

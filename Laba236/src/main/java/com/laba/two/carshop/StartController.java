@@ -32,15 +32,12 @@ class StartController {
 
     @RequestMapping(method=RequestMethod.POST, consumes = "application/json", produces = { "application/json", "application/xml" })
     public @ResponseBody ResponseEntity<Object> append(@RequestBody CarsEntity entity){
-        System.out.println(entity.getName());
         carsService.append(entity);
         return ResponseEntity.ok(entity);
     }
 
     @RequestMapping(method = RequestMethod.PUT, consumes = "application/json")
     public @ResponseBody ResponseEntity<Object> update(@RequestBody CarsEntity entity){
-        System.out.println(entity.getCost());
-        System.out.println(entity.getId());
         CarsEntity tmp = carsService.update(entity);
         return ResponseEntity.ok(tmp);
     }

@@ -10,10 +10,10 @@ import java.util.Optional;
 @Component
 public interface CarsService {
     Iterable<CarsEntity> findAll();
-    void delete(CarsEntity game);
+    void delete(CarsEntity car);
     void deleteById(String id);
     Optional<CarsEntity> findById(String id);
-    CarsEntity update(CarsEntity game);
-    void append(CarsEntity game);
+    CarsEntity update(CarsEntity car);
+    void append(CarsEntity car);
 
 }

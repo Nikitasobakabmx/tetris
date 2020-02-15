@@ -5,13 +5,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-//@SpringBootApplication(scanBasePackages = {
-//        "com.laba.two.restfull.db.dao",
-//        "com.laba.two.restfull.db.model",
-//        "com.laba.two.restfull.controller.Controller",
-//        "com.laba.two.restfull.config",
-//        "com.laba.two.restfull.service"})
-
 @ComponentScan
 @EnableAutoConfiguration
 @EnableJpaRepositories("com.laba.two.carshop.repositories")

@@ -12,7 +12,7 @@
     <li>
         <form ng-submit="submitGame()" id = "adding">
             <input type = "text" name = "name" value="Название">
-            <input type = "text" name = "studioName" value="Студия">
+            <input type = "text" name = "brand" value="Бренд">
             <input type = "text" name = "cost" value ="Стоимость">
             <button ng-click = "appendCar()" name = "button" value = "add">Добавить</button>
         </form>
@@ -22,10 +22,10 @@
     <li ng-repeat = "car in cars">
         <form id={{car.id}}>
             <input type = "text" name="name" value  = {{car.name}}>
-            <input type = "text" name="studioName" value  = {{car.brand}}>
+            <input type = "text" name="brand" value  = {{car.brand}}>
             <input type = "text" name="cost" value={{car.cost}}>
             <input type = "hidden" name="id" value  = {{car.id}}>
-            <button ng-click="deleteCat(car)">Удалить</button>
+            <button ng-click="deleteCar(car)">Удалить</button>
             <button ng-click="editCar(car)">Изменить</button>
         </form>
 

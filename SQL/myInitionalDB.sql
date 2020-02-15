@@ -1,6 +1,4 @@
-CREATE DATABASE gleba;
-
-CREATE TABLE automobile
+CREATE TABLE IF NOT EXISTS automobile
 (
     id          BIGSERIAL       PRIMARY KEY,
     name        VARCHAR(100)    NOT NULL,
@@ -9,7 +7,7 @@ CREATE TABLE automobile
     photo       VARCHAR(200)    DEFAULT NULL,
     description VARCHAR(10000)  DEFAULT NULL
 );
-CREATE TABLE users
+CREATE TABLE IF NOT EXISTS users
 (
     id      BIGSERIAL   PRIMARY KEY,
     name    VARCHAR(100)    NOT null,
